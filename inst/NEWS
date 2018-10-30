@@ -1,0 +1,36 @@
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+------------------------ pbv NEWS -----------------------------
+
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+pbv: Probabilities for Bivariate Normal Distribution
+
+Alexander Robitzsch
+IPN - Leibniz Institute for Science and Mathematics Education 
+at Kiel University
+
+Questions or suggestions about sirt can be sent to:
+robitzsch@ipn.uni-kiel.de
+
+For reporting a bug, please provide always a reproducible R script 
+and (if necessary) a corresponding dataset.
+
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+CHANGELOG pbv
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+
+
+------------------------------------------------------------------------
+VERSIONS pbv 0.1  |  2018-10-25  |  Last: pbv 0.1-17
+------------------------------------------------------------------------
+
+ADDED * included pbvnorm() and dbvnorm() functions
+
+DATA  * included/modified datasets: ---
+EXAMP * included/modified examples: pbvnorm (1)
+
