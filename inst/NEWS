@@ -10,7 +10,7 @@ Alexander Robitzsch
 IPN - Leibniz Institute for Science and Mathematics Education 
 at Kiel University
 
-Questions or suggestions about sirt can be sent to:
+Questions or suggestions can be sent to:
 robitzsch@ipn.uni-kiel.de
 
 For reporting a bug, please provide always a reproducible R script 
@@ -26,7 +26,19 @@ CHANGELOG pbv
 
 
 ------------------------------------------------------------------------
-VERSIONS pbv 0.1  |  2018-10-25  |  Last: pbv 0.1-17
+VERSIONS pbv 0.2  |  2018-11-06  |  Last: pbv 0.2-16
+------------------------------------------------------------------------
+
+NOTE  * added information about calling Rcpp functions
+
+
+DATA  * included/modified datasets: ---
+EXAMP * included/modified examples: pbvnorm (1)
+
+
+
+------------------------------------------------------------------------
+VERSIONS pbv 0.1  |  2018-10-26  |  Last: pbv 0.1-17
 ------------------------------------------------------------------------
 
 ADDED * included pbvnorm() and dbvnorm() functions

@@ -1,5 +1,5 @@
 %% File Name: pbvnorm.Rd
-%% File Version: 0.09
+%% File Version: 0.23
 
 \name{pbvnorm}
 \alias{pbvnorm}
@@ -60,16 +60,21 @@ West, G. (2005). Better approximations to cumulative normal functions.
 %\author{
 %%  ~~who you are~~
 %}
-%\note{
-%%  ~~further notes~~
-%}
+\note{
+The \pkg{pbv} package can also be used to include \CRANpkg{Rcpp} functions for
+computing bivariate probabilities at the C++ level. Numeric and vector versions are 
+\cr \cr
+\code{double pbv::pbv_rcpp_pbvnorm0( double h1, double hk, double r)} \cr \cr
+\code{Rcpp::NumericVector pbv::pbv_rcpp_pbvnorm( Rcpp::NumericVector x, }\cr
+\code{Rcpp::NumericVector y, Rcpp::NumericVector rho)}
+}
 
 %% ~Make other sections like Warning with \section{Warning }{....} ~
 
 \seealso{
-See \code{\link[pbivnorm:pbivnorm]{pbivnorm::pbivnorm}} and
-\code{mnormt::biv.nt.prob} for alternative implementations (Genz, 1992)
-which are not (yet) completely vectorized.
+See \code{\link[pbivnorm:pbivnorm]{pbivnorm::pbivnorm}} in the \CRANpkg{pbivnorm} package 
+and \code{mnormt::biv.nt.prob} in the \CRANpkg{mnormt} package 
+for alternative implementations (Genz, 1992).
 }
 
 
@@ -91,10 +96,7 @@ res1 <- pbv::pbvnorm(x=x,y=y,rho=rho)
 
 #-- compare results with pbivnorm package
 library(pbivnorm)
-res2 <- rep(NA, N)
-for (ii in 1:N){
-    res2[ii] <- pbivnorm::pbivnorm(x=x[ii], y=y[ii], rho=rho[ii])
-}
+res2 <- pbivnorm::pbivnorm(x=x, y=y, rho=rho)
 
 summary(abs(res1-res2))
 
@@ -116,5 +118,5 @@ summary(abs(res1-res2))
 }
 % Add one or more standard keywords, see file 'KEYWORDS' in the
 % R documentation directory.
-%\keyword{ ~kwd1 }% use one of  RShowDoc("KEYWORDS")
+%% \keyword{\code{mnormt::biv.nt.prob}}% use one of  RShowDoc("KEYWORDS")
 %\keyword{ ~kwd2 }% __ONLY ONE__ keyword per line
