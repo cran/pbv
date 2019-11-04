@@ -1,5 +1,5 @@
 %% File Name: pbv-package.Rd
-%% File Version: 0.02
+%% File Version: 0.03
 
 \name{pbv-package}
 \alias{pbv-package}
@@ -28,6 +28,7 @@ Maintainer: \packageMaintainer{pbv}
 \references{
 Drezner, Z., & Wesolowsky, G. O. (1990). On the computation of the bivariate normal 
 integral. \emph{Journal of Statistical Computation and Simulation, 35}(1-2), 101-107.
+\doi{10.1080/00949659008811236}
 }
 
 

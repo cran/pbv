@@ -1,9 +1,15 @@
 %% File Name: pbvnorm.Rd
-%% File Version: 0.23
+%% File Version: 0.33
 
 \name{pbvnorm}
 \alias{pbvnorm}
 \alias{dbvnorm}
+\alias{pbv_rcpp_dbvnorm}
+\alias{pbv_rcpp_dbvnorm0}
+\alias{pbv_rcpp_pbvnorm}
+\alias{pbv_rcpp_pbvnorm0}
+
+
 %- Also NEED an '\alias' for EACH other topic documented here.
 
 \title{
@@ -11,7 +17,7 @@ Probabilities for Bivariate Normal Distribution
 }
 
 \description{
-The function \code{pbvnorm} computes probabilities \eqn{\Phi_2(x,y,\rho)} for 
+The function \code{pbvnorm} computes probabilities \eqn{\Phi_2(x,y,\rho)} for
 the standardized bivariate normal distribution (Drezner & Wesolowsky, 1990;
 West, 2004).
 
@@ -22,6 +28,12 @@ The function \code{dbvnorm} computes the corresponding density \eqn{\phi_2(x,y,\
 pbvnorm(x, y, rho)
 
 dbvnorm(x, y, rho, log=FALSE)
+
+## exported Rcpp functions
+pbv_rcpp_pbvnorm0( h1, hk, r)
+pbv_rcpp_pbvnorm( x, y, rho)
+pbv_rcpp_dbvnorm0( x, y, rho, use_log)
+pbv_rcpp_dbvnorm( x, y, rho, use_log)
 }
 %- maybe also 'usage' for other objects documented here.
 \arguments{
@@ -36,6 +48,10 @@ Vector of correlations
 }
 \item{log}{Logical indicating whether logarithm of the density
 should be calculated}
+\item{h1}{Numeric}
+\item{hk}{Numeric}
+\item{r}{Numeric}
+\item{use_log}{Logical}
 }
 
 %\details{
@@ -43,17 +59,19 @@ should be calculated}
 %}
 
 \value{
-Vector
+A vector
 }
 
 \references{
-Drezner, Z., & Wesolowsky, G. O. (1990). On the computation of the bivariate normal 
+Drezner, Z., & Wesolowsky, G. O. (1990). On the computation of the bivariate normal
 integral. \emph{Journal of Statistical Computation and Simulation, 35}(1-2), 101-107.
+\doi{10.1080/00949659008811236}
 
-Genz, A. (1992). Numerical computation of multivariate normal probabilities. 
-\emph{Journal of Computational and Graphical Statistics, 1}(2), 141-149. 
+Genz, A. (1992). Numerical computation of multivariate normal probabilities.
+\emph{Journal of Computational and Graphical Statistics, 1}(2), 141-149.
+\doi{10.2307/1390838}
 
-West, G. (2005). Better approximations to cumulative normal functions. 
+West, G. (2005). Better approximations to cumulative normal functions.
 \emph{Wilmott Magazine, 9}, 70-76.
 }
 
@@ -62,7 +80,7 @@ West, G. (2005). Better approximations to cumulative normal functions.
 %}
 \note{
 The \pkg{pbv} package can also be used to include \CRANpkg{Rcpp} functions for
-computing bivariate probabilities at the C++ level. Numeric and vector versions are 
+computing bivariate probabilities at the C++ level. Numeric and vector versions are
 \cr \cr
 \code{double pbv::pbv_rcpp_pbvnorm0( double h1, double hk, double r)} \cr \cr
 \code{Rcpp::NumericVector pbv::pbv_rcpp_pbvnorm( Rcpp::NumericVector x, }\cr
@@ -72,8 +90,8 @@ computing bivariate probabilities at the C++ level. Numeric and vector versions 
 %% ~Make other sections like Warning with \section{Warning }{....} ~
 
 \seealso{
-See \code{\link[pbivnorm:pbivnorm]{pbivnorm::pbivnorm}} in the \CRANpkg{pbivnorm} package 
-and \code{mnormt::biv.nt.prob} in the \CRANpkg{mnormt} package 
+See \code{\link[pbivnorm:pbivnorm]{pbivnorm::pbivnorm}} in the \pkg{pbivnorm} package
+and \code{mnormt::biv.nt.prob} in the \pkg{mnormt} package
 for alternative implementations (Genz, 1992).
 }
 

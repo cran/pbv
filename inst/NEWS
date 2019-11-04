@@ -25,17 +25,26 @@ CHANGELOG pbv
 
 
 
+
+
+
+------------------------------------------------------------------------
+VERSIONS pbv 0.3  |  2019-11-04  |  Last: pbv 0.3-19
+------------------------------------------------------------------------
+
+NOTE  * now export internal Rcpp functions pbv_rcpp_foo() to R namespace
+
+DATA  * included/modified datasets: ---
+EXAMP * included/modified examples: ---
+
 ------------------------------------------------------------------------
 VERSIONS pbv 0.2  |  2018-11-06  |  Last: pbv 0.2-16
 ------------------------------------------------------------------------
 
 NOTE  * added information about calling Rcpp functions
 
-
 DATA  * included/modified datasets: ---
 EXAMP * included/modified examples: pbvnorm (1)
-
-
 
 ------------------------------------------------------------------------
 VERSIONS pbv 0.1  |  2018-10-26  |  Last: pbv 0.1-17
