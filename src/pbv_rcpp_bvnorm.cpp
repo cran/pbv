@@ -1,5 +1,5 @@
 //// File Name: pbv_rcpp_bvnorm.cpp
-//// File Version: 0.551
+//// File Version: 0.552
 
 
 
@@ -46,7 +46,7 @@ Rcpp::NumericVector pbv_rcpp_pnorm( Rcpp::NumericVector x)
 ///** pbv_rcpp_pbvnorm0
 // [[Rcpp::export]]
 double pbv_rcpp_pbvnorm0( double h1, double hk, double r)
-{    
+{
     int NX=5;
     Rcpp::NumericVector X(NX);
     Rcpp::NumericVector W(NX);
