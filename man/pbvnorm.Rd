@@ -1,5 +1,5 @@
 %% File Name: pbvnorm.Rd
-%% File Version: 0.34
+%% File Version: 0.352
 
 \name{pbvnorm}
 \alias{pbvnorm}
@@ -84,7 +84,7 @@ computing bivariate probabilities at the C++ level. Numeric and vector versions 
 \cr \cr
 \code{double pbv::pbv_rcpp_pbvnorm0( double h1, double hk, double r)} \cr \cr
 \code{Rcpp::NumericVector pbv::pbv_rcpp_pbvnorm( Rcpp::NumericVector x, }\cr
-\code{Rcpp::NumericVector y, Rcpp::NumericVector rho)}
+\code{     Rcpp::NumericVector y, Rcpp::NumericVector rho)}
 }
 
 %% ~Make other sections like Warning with \section{Warning }{....} ~
@@ -112,6 +112,7 @@ rho <- stats::runif(N,-.95,.95)
 #*** compute probabilities
 res1 <- pbv::pbvnorm(x=x,y=y,rho=rho)
 
+\dontrun{
 #-- compare results with pbivnorm package
 library(pbivnorm)
 res2 <- pbivnorm::pbivnorm(x=x, y=y, rho=rho)
@@ -122,7 +123,6 @@ summary(abs(res1-res2))
 log <- TRUE    # logical indicating whether log density should be evaluated
 res1 <- pbv::dbvnorm(x=x, y=y, rho=rho, log=log )
 
-\dontrun{
 #-- compare results with mvtnorm package
 library(mvtnorm)
 res2 <- rep(NA, N)
